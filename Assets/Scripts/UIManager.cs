@@ -30,6 +30,17 @@ public class UIManager : MonoBehaviour
     [SerializeField] public Text _currentWinningsText;
     [SerializeField] public Text _currentBetText;
 
+    [Header("Chest Text")]
+    [SerializeField] public Text _topRightChest;
+    [SerializeField] public Text _topLeftChest;
+    [SerializeField] public Text _topMiddleChest;
+    [SerializeField] public Text _middleRightChest;
+    [SerializeField] public Text _middleLeftChest;
+    [SerializeField] public Text _middleMiddleChest;
+    [SerializeField] public Text _bottomRightChest;
+    [SerializeField] public Text _bottomLeftChest;
+    [SerializeField] public Text _bottomeMiddleChest;
+
     [Header("Play Button")]
     [SerializeField] public Button _playButton;
 

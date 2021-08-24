@@ -24,7 +24,7 @@ public class Multiplier : MonoBehaviour
         else if (OddsRoll <= _lowOdds + _midOdds + _highOdds)
             GetMultiplier(1);
         else
-        GetMultiplier(0);
+            GetMultiplier(0);
     }
 
     private void GetMultiplier(int MultiplierSet)
@@ -35,24 +35,29 @@ public class Multiplier : MonoBehaviour
         {
             case 0:
                 multiplier = 0;
-                GameManager.Instance.SplitWinnings(multiplier);
+                GameManager.Instance.PossibleWinnings(multiplier);
+                Debug.Log("Case 0");
                 break;
             case 1:
                 multiplierRoll = Random.Range(0, _lowWin.Length);
                 multiplier = _lowWin[multiplierRoll];
-                GameManager.Instance.SplitWinnings(multiplier);
+                GameManager.Instance.PossibleWinnings(multiplier);
+                Debug.Log("Case 1");
                 break;
             case 2:
                 multiplierRoll = Random.Range(0, _midWin.Length);
                 multiplier = _midWin[multiplierRoll];
-                GameManager.Instance.SplitWinnings(multiplier);
+                GameManager.Instance.PossibleWinnings(multiplier);
+                Debug.Log("Case 2");
                 break;
             case 3:
                 multiplierRoll = Random.Range(0, _highWin.Length);
                 multiplier = _highWin[multiplierRoll];
-                GameManager.Instance.SplitWinnings(multiplier);
+                GameManager.Instance.PossibleWinnings(multiplier);
+                Debug.Log("Case 3");
                 break;
             default:
+                Debug.Log("Default Case");
                 break;
         }
     }
