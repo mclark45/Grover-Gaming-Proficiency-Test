@@ -26,33 +26,33 @@ public class UIManager : MonoBehaviour
     }
 
     [Header("Game Text")]
-    [SerializeField] public Text _TotalAmountText;
-    [SerializeField] public Text _currentWinningsText;
-    [SerializeField] public Text _currentBetText;
+    public Text _TotalAmountText;
+    public Text _currentWinningsText;
+    public Text _currentBetText;
 
     [Header("Chest Text")]
-    [SerializeField] public Text _topRightChest;
-    [SerializeField] public Text _topLeftChest;
-    [SerializeField] public Text _topMiddleChest;
-    [SerializeField] public Text _middleRightChest;
-    [SerializeField] public Text _middleLeftChest;
-    [SerializeField] public Text _middleMiddleChest;
-    [SerializeField] public Text _bottomRightChest;
-    [SerializeField] public Text _bottomLeftChest;
-    [SerializeField] public Text _bottomeMiddleChest;
+    public Text _topRightChest;
+    public Text _topLeftChest;
+    public Text _topMiddleChest;
+    public Text _middleRightChest;
+    public Text _middleLeftChest;
+    public Text _middleMiddleChest;
+    public Text _bottomRightChest;
+    public Text _bottomLeftChest;
+    public Text _bottomeMiddleChest;
 
     [Header("Play Button")]
-    [SerializeField] public Button _playButton;
+    public Button _playButton;
 
     [Header("Add Bet Buttons")]
-    [SerializeField] public Button _plus25Button;
-    [SerializeField] public Button _plus50Button;
-    [SerializeField] public Button _plus1Button;
-    [SerializeField] public Button _plus5Button;
+    public Button _plus25Button;
+    public Button _plus50Button;
+    public Button _plus1Button;
+    public Button _plus5Button;
 
     [Header("Subtract Bet Buttons")]
-    [SerializeField] public Button _minus25Button;
-    [SerializeField] public Button _minus50Button;
-    [SerializeField] public Button _minus1Button;
-    [SerializeField] public Button _minus5Button;
+    public Button _minus25Button;
+    public Button _minus50Button;
+    public Button _minus1Button;
+    public Button _minus5Button;
 }

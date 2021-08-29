@@ -34,6 +34,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float _minimumIncrement = 0.05f;
     private Chests _chest;
 
+    private void Start()
+    {
+        _chest = GetComponent<Chests>();
+
+        if (_chest == null)
+            Debug.LogError("Chest Script is null");
+    }
+
     private void Update()
     {
         if (_chestToPick.Length > 0)
@@ -53,14 +61,6 @@ public class GameManager : MonoBehaviour
             UIManager.Instance._playButton.interactable = true;
             ManageButtons();
         }
-    }
-
-    private void Start()
-    {
-        _chest = GetComponent<Chests>();
-
-        if (_chest == null)
-            Debug.LogError("Chest Script is null");
     }
 
     public float Total()
@@ -91,8 +91,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        Debug.Log("Multiplier: " + multiplier);
-        Debug.Log("current bet: " + _currentBet);
         _possibleWinnings = _currentBet * multiplier;
         _currentBet = 0f;
 
@@ -124,7 +122,6 @@ public class GameManager : MonoBehaviour
         UIManager.Instance._currentWinningsText.text = ("Current Winnings: $0.00");
 
         float amountToShow = 0;
-        Debug.Log("ChestSelected: " + _chestSelected);
         if (_chestSelected <= _chestToPick.Length - 1)
         {
             amountToShow = _chestToPick[_chestSelected];
@@ -132,7 +129,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            text.text = "$0";
+            text.text = "$0.00";
             _chest.DisableChest();
         }
 
@@ -146,7 +143,6 @@ public class GameManager : MonoBehaviour
 
         if (_chestSelected == _chestToPick.Length)
         {
-            Debug.Log("Reset Game: " + _chestSelected);
             ResetGame();
         }
 
